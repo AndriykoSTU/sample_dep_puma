@@ -1,9 +1,10 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
-server 'your_server_ip', port: your_port_num, roles: [:web, :app, :db], primary: true
+server '192.168.55.10',  roles: [:web, :app, :db], primary: true
 
-set :repo_url,        'git@github.com:AndriykoSTU/sample_dep_puma.git'
+set :scm, :git
+set :repo_url,        'https://AndriykoSTU:deusexmach1na@github.com/AndriykoSTU/sample_dep_puma'
 set :application,     'sample_dep'
 set :user,            'deployer'
 set :puma_threads,    [4, 16]
